@@ -1,0 +1,8 @@
+name: KillTheKing
+version: 1.0.0
+description: A Kill the king event plugin
+author: HappyTNTguy
+main: me.happy.king.KillTheKing
+commands:
+  king:
+    description: Starts the king event
