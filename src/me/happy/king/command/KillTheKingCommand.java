@@ -24,6 +24,12 @@ public class KillTheKingCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        if(!sender.hasPermission("command.killtheking")) {
+            sender.sendMessage(ChatColor.RED + "No perms.");
+            return true;
+        }
+
         if ((args.length == 2) && (args[0].equalsIgnoreCase("start"))) {
             Player kingPerson = Bukkit.getPlayer(args[1]);
 
