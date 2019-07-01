@@ -34,6 +34,11 @@ public class KillTheKingListener implements Listener {
                     break;
                 }
             }
+
+            if (p.getKiller() == null) {
+                Bukkit.broadcastMessage(ChatColor.RED + p.getName() + ChatColor.GREEN + " has died, but not from a player.");
+            }
+
             Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&6&lWinner&7: &f" + p.getKiller().getName()));
             plugin.getKingManager().active = false;
         }
